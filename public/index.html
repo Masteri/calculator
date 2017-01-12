@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>Calculator</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<br>
+<div class="container">
+    <div class="row justify-content-md-center ">
+        <div class="col-6 table-bordered btn-outline-info"> <br>
+        <form class="form-group">
+            <div class="alert alert-success text-center" role="alert">
+                <strong>Виберіть вид робіт</strong>:
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon">Послуга :    </span>
+                    <select  class="form-control " id="products" onchange="calculate(this)">
+                        <option selected="selected" value="3">Друк А4 (4+0) кольоровий 1-ст.</option>
+                        <option value="4">Друк А4 (4+4) кольоровий 2-ст.</option>
+                        <option value="7">Друк А3 (4+0) кольоровий 1-ст.</option>
+                        <option value="8">Друк А3 (4+4) кольоровий 2-ст.</option>
+                        <option value="2">Друк А4 (1+1) чорно-білий 2-ст.</option>
+                        <option value="1">Друк А4 (1+0) чорно-білий 1-ст.</option>
+                        <option value="5">Друк А3 (1+0) чорно-білий 1-ст.</option>
+                        <option value="6">Друк А3 (1+1) чорно-білий 2-ст.</option>
+                    </select>
+            </div>
+            <br>
+
+            <div class="input-group">
+                <span class="input-group-addon">Кількість: </span>
+                <input id="kst" type="text" class="form-control" placeholder="kst" aria-describedby="basic-addon1" onkeyup="calculate()" value="1" />
+                </div>
+            <br>
+
+                <div  class="calc">
+                    <b> <span class="btn btn-primary btn-lg" id="summa"></span><br> </b>
+
+                </div>
+        </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/select.js"></script>
+<script>
+    window.onload = function() {
+        calculate();
+    };
+</script>
+</body>
+</html>
+
