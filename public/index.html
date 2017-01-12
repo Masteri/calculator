@@ -16,7 +16,7 @@
                 <strong>Виберіть вид робіт</strong>:
             </div>
             <div class="input-group">
-                <span class="input-group-addon">Послуга :    </span>
+                <span class="input-group-addon">Послуга     :    </span>
                     <select  class="form-control " id="products" onchange="calculate(this)">
                         <option selected="selected" value="3">Друк А4 (4+0) кольоровий 1-ст.</option>
                         <option value="4">Друк А4 (4+4) кольоровий 2-ст.</option>
@@ -29,9 +29,29 @@
                     </select>
             </div>
             <br>
+            <div class="input-group">
+                <span class="input-group-addon">Матеріал :    </span>
+                <select  class="form-control " id="materials" onchange="calculate(this)">
+                    <option selected="selected" value="7" >Папір крейдований 300 гр</option>
+                    <option value="6" >Папір крейдований 250 гр</option>
+                    <option value="11" >Папір крейдований 200 гр</option>
+                    <option value="4" >Папір крейдований 170 гр</option>
+                    <option value="80" >Папір крейдований 150 гр</option>
+                    <option value="81" >Папір крейдований 130 гр</option>
+                    <option value="3" >Папір крейдований 90 гр</option>
+                    <option value="1" >Папір офсетний 65 гр</option>
+                    <option value="2" >Папір офсетний 80 гр</option>
+                    <option value="37" >Папір кольоровий 80 гр</option>
+                    <option value="38" >Папір кольоровий 160 гр</option>
+                    <option value="13" >Папір самонаклеювальний</option>
+                    <option value="32" >Дизайнерський картон</option>
+                    <option value="12" >Папір замовника</option>
+                </select>
+            </div>
+            <br>
 
             <div class="input-group">
-                <span class="input-group-addon">Кількість: </span>
+                <span class="input-group-addon">Кількість   : </span>
                 <input id="kst" type="text" class="form-control" placeholder="kst" aria-describedby="basic-addon1" onkeyup="calculate()" value="1" />
                 </div>
             <br>
