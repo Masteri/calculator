@@ -5,6 +5,10 @@
     <meta charset=utf-8 />
     <title>Calculator</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="dbprice.json"></script>--->
+    <script src="js/select.js"></script>
+
 </head>
 <body>
 <br>
@@ -17,42 +21,42 @@
             </div>
             <div class="input-group">
                 <span class="input-group-addon">Послуга     :    </span>
-                    <select  class="form-control " id="products" onchange="calculate(this)">
-                        <option selected="selected" value="3">Друк А4 (4+0) кольоровий 1-ст.</option>
-                        <option value="4">Друк А4 (4+4) кольоровий 2-ст.</option>
-                        <option value="7">Друк А3 (4+0) кольоровий 1-ст.</option>
-                        <option value="8">Друк А3 (4+4) кольоровий 2-ст.</option>
-                        <option value="2">Друк А4 (1+1) чорно-білий 2-ст.</option>
-                        <option value="1">Друк А4 (1+0) чорно-білий 1-ст.</option>
-                        <option value="5">Друк А3 (1+0) чорно-білий 1-ст.</option>
-                        <option value="6">Друк А3 (1+1) чорно-білий 2-ст.</option>
+                    <select  class="form-control " id="products" onchange="GetPrice(this)">
+                        <option selected="selected" value="1">Друк А4 (4+0) кольоровий 1-ст.</option>
+                        <option value="2">Друк А4 (4+4) кольоровий 2-ст.</option>
+                        <option value="3">Друк А3 (4+0) кольоровий 1-ст.</option>
+                        <option value="4">Друк А3 (4+4) кольоровий 2-ст.</option>
+                        <option value="5">Друк А4 (1+1) чорно-білий 2-ст.</option>
+                        <option value="6">Друк А4 (1+0) чорно-білий 1-ст.</option>
+                        <option value="7">Друк А3 (1+0) чорно-білий 1-ст.</option>
+                        <option value="8">Друк А3 (1+1) чорно-білий 2-ст.</option>
                     </select>
             </div>
             <br>
             <div class="input-group">
                 <span class="input-group-addon">Матеріал :    </span>
-                <select  class="form-control " id="materials" onchange="calculate(this)">
-                    <option selected="selected" value="7" >Папір крейдований 300 гр</option>
-                    <option value="6" >Папір крейдований 250 гр</option>
-                    <option value="11" >Папір крейдований 200 гр</option>
+                <select  class="form-control " id="materials" onchange="GetPrice(this)">
+                    <option selected="selected" value="1" >Папір крейдований 300 гр</option>
+                    <option value="2" >Папір крейдований 250 гр</option>
+                    <option value="3" >Папір крейдований 200 гр</option>
                     <option value="4" >Папір крейдований 170 гр</option>
-                    <option value="80" >Папір крейдований 150 гр</option>
-                    <option value="81" >Папір крейдований 130 гр</option>
-                    <option value="3" >Папір крейдований 90 гр</option>
-                    <option value="1" >Папір офсетний 65 гр</option>
-                    <option value="2" >Папір офсетний 80 гр</option>
-                    <option value="37" >Папір кольоровий 80 гр</option>
-                    <option value="38" >Папір кольоровий 160 гр</option>
-                    <option value="13" >Папір самонаклеювальний</option>
-                    <option value="32" >Дизайнерський картон</option>
-                    <option value="12" >Папір замовника</option>
+                    <option value="5" >Папір крейдований 150 гр</option>
+                    <option value="6" >Папір крейдований 130 гр</option>
+                    <option value="7" >Папір крейдований 90 гр</option>
+                    <option value="8" >Папір офсетний 65 гр</option>
+                    <option value="9" >Папір офсетний 80 гр</option>
+                    <option value="10" >Папір кольоровий 80 гр</option>
+                    <option value="11" >Папір кольоровий 160 гр</option>
+                    <option value="12" >Папір самонаклеювальний</option>
+                    <option value="13" >Дизайнерський картон</option>
+                    <option value="14" >Папір замовника</option>
                 </select>
             </div>
             <br>
 
             <div class="input-group">
                 <span class="input-group-addon">Кількість   : </span>
-                <input id="kst" type="text" class="form-control" placeholder="kst" aria-describedby="basic-addon1" onkeyup="calculate()" value="1" />
+                <input id="kst" type="text" class="form-control" placeholder="kst" aria-describedby="basic-addon1" onkeyup="GetPrice()" value="1" />
                 </div>
             <br>
 
@@ -66,10 +70,10 @@
 
 </div>
 
-<script src="js/select.js"></script>
+
 <script>
     window.onload = function() {
-        calculate();
+        GetPrice();
     };
 </script>
 </body>
